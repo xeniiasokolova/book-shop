@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form th:action="'/book/' + ${book.id} +'/redactor'" method="post">
+  <p>Введите название книги</p>
+  <input type="text" name="title" th:value="*{book.title}">
+
+  <p>Введите автора книги</p>
+  <input type="text" name="author" th:value="*{book.author}">
+
+  <p>Введите описание для книги</p>
+  <input type="text" th:value="*{book.description}" name="info" id="" cols="30" rows="10">
+
+  <p>Введите стоимость книги</p>
+  <input type="text" name="price" th:value="*{book.price}"><br><br>
+
+  <input type="submit" value="Сохранить">
+</form>
+</body>
+</html>

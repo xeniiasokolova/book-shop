@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div th:insert="blocks/header :: header"></div>
+
+   <div class="container">
+       <div th:each="item : ${books}">
+           <h1 th:text="'Название книги ' + ${item.title}"></h1>
+           <h4 th:text="'Автор книги ' + ${item.author}"></h4>
+           <h4 th:text="'Стоимость книги ' + ${item.price}"></h4>
+           <a th:href="'/book/' + ${item.id}">Карточка товара</a><br>
+           <a th:href="'/book/' + ${item.id} +'/redactor'">Редактировать товар</a><br>
+           <a th:href="'/book/' + ${item.id} +'/delete'">Удалить товар</a>
+           <hr>
+       </div>
+   </div>
+</body>
+</html>
