@@ -1,0 +1,26 @@
+.container {
+   background-color : #FFD9C0;
+}
+
+.body-style {
+   background-color : #FAF0D7;
+}
+
+.header-style {
+  background-color : #8CC0DE;
+}
+
+nav {
+    background-color : #7F669D;
+    padding : 4px;
+    margin-top : -7px;
+    margin-left : -7px;
+    width:100%;
+}
+
+nav h2 {
+    font-size: 25px;
+    color : white;
+    text-align : center;
+
+}

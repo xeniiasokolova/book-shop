@@ -68,4 +68,5 @@ public class MainController {
         bookRepository.deleteById(id); //удаление из бд по ид
         return "redirect:/"; //переход на главную страницу
     }
+
 }
